@@ -1,8 +1,7 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Card } from '@/components/ui/card';
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 export function AboutSection() {
   const skills = [
@@ -17,31 +16,34 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/50">
+    <section
+      id="about"
+      className="justify-center py-20 flex items-center bg-muted/50"
+    >
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto max-w-5xl"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold tracking-tight mb-12 text-center"
+            className="mb-12 text-center text-3xl font-bold tracking-tight"
           >
             About Me
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid items-center gap-12 md:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="relative aspect-square rounded-lg overflow-hidden"
+              className="relative aspect-square overflow-hidden rounded-lg"
             >
               <Image
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
@@ -58,8 +60,8 @@ export function AboutSection() {
               className="space-y-6"
             >
               <p className="text-lg text-muted-foreground">
-                With over 8 years of experience in software development, I've had
-                the privilege of working with cutting-edge technologies and
+                With over 8 years of experience in software development, I've
+                had the privilege of working with cutting-edge technologies and
                 building scalable solutions for complex problems.
               </p>
               <p className="text-lg text-muted-foreground">
@@ -68,7 +70,7 @@ export function AboutSection() {
                 and technical writing.
               </p>
               <div>
-                <h3 className="text-xl font-semibold mb-4">Technical Skills</h3>
+                <h3 className="mb-4 text-xl font-semibold">Technical Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill, index) => (
                     <motion.div
@@ -78,7 +80,7 @@ export function AboutSection() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                      <Card className="px-4 py-2 bg-background hover:bg-accent transition-colors">
+                      <Card className="bg-background px-4 py-2 transition-colors hover:bg-accent">
                         {skill}
                       </Card>
                     </motion.div>

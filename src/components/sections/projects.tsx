@@ -1,12 +1,11 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Github, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const projects = [
   {
@@ -37,19 +36,19 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="justify-center py-20 flex items-center">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto max-w-5xl"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
             Featured Projects
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -58,13 +57,13 @@ export function ProjectsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full flex flex-col">
+                <Card className="flex h-full flex-col">
                   <div className="relative aspect-video">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover rounded-t-lg"
+                      className="rounded-t-lg object-cover"
                     />
                   </div>
                   <CardHeader>

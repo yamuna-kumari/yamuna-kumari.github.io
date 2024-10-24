@@ -1,8 +1,7 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+"use client";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const experiences = [
   {
@@ -30,16 +29,19 @@ const experiences = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-muted/50">
+    <section
+      id="experience"
+      className="flex justify-center py-20 items-center bg-muted/50"
+    >
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto max-w-5xl"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
             Professional Experience
           </h2>
           <div className="space-y-6">
@@ -53,7 +55,7 @@ export function ExperienceSection() {
               >
                 <Card>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex items-start justify-between">
                       <div>
                         <CardTitle>{experience.position}</CardTitle>
                         <CardDescription>{experience.company}</CardDescription>
@@ -62,7 +64,7 @@ export function ExperienceSection() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="mb-4 text-muted-foreground">
                       {experience.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
