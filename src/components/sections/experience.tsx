@@ -1,45 +1,56 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+"use client";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: 'Tech Giants Inc.',
-    position: 'Senior Software Engineer',
-    period: '2020 - Present',
-    description: 'Led development of cloud-native applications and mentored junior developers.',
-    technologies: ['React', 'Node.js', 'AWS', 'Kubernetes'],
+    company: "Tech Giants Inc.",
+    position: "Senior Software Engineer",
+    period: "2020 - Present",
+    description:
+      "Led development of cloud-native applications and mentored junior developers.",
+    technologies: ["React", "Node.js", "AWS", "Kubernetes"],
   },
   {
-    company: 'Innovation Labs',
-    position: 'Software Engineer',
-    period: '2018 - 2020',
-    description: 'Developed scalable microservices and implemented CI/CD pipelines.',
-    technologies: ['Python', 'Docker', 'PostgreSQL', 'Jenkins'],
+    company: "Innovation Labs",
+    position: "Software Engineer",
+    period: "2018 - 2020",
+    description:
+      "Developed scalable microservices and implemented CI/CD pipelines.",
+    technologies: ["Python", "Docker", "PostgreSQL", "Jenkins"],
   },
   {
-    company: 'StartUp Co',
-    position: 'Full Stack Developer',
-    period: '2016 - 2018',
-    description: 'Built and maintained full-stack web applications from scratch.',
-    technologies: ['JavaScript', 'React', 'Express', 'MongoDB'],
+    company: "StartUp Co",
+    position: "Full Stack Developer",
+    period: "2016 - 2018",
+    description:
+      "Built and maintained full-stack web applications from scratch.",
+    technologies: ["JavaScript", "React", "Express", "MongoDB"],
   },
 ];
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-muted/50">
+    <section
+      id="experience"
+      className="flex items-center justify-center bg-muted/50 py-20"
+    >
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto max-w-5xl"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
             Professional Experience
           </h2>
           <div className="space-y-6">
@@ -53,7 +64,7 @@ export function ExperienceSection() {
               >
                 <Card>
                   <CardHeader>
-                    <div className="flex justify-between items-start">
+                    <div className="flex items-start justify-between">
                       <div>
                         <CardTitle>{experience.position}</CardTitle>
                         <CardDescription>{experience.company}</CardDescription>
@@ -62,7 +73,7 @@ export function ExperienceSection() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="mb-4 text-muted-foreground">
                       {experience.description}
                     </p>
                     <div className="flex flex-wrap gap-2">

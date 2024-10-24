@@ -1,10 +1,10 @@
 "use client";
-import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +51,7 @@ export function Navigation() {
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     const id = href.replace("/#", "");
@@ -71,7 +71,7 @@ export function Navigation() {
         "fixed top-0 z-50 w-full transition-all duration-300",
         isScrolled
           ? "border-b bg-background/80 backdrop-blur-md"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
     >
       <div className="container mx-auto px-4">
@@ -89,7 +89,7 @@ export function Navigation() {
                 onClick={(e) => scrollToSection(e, item.href)}
                 className={cn(
                   "relative py-1 text-muted-foreground transition-colors hover:text-foreground",
-                  activeSection === item.id && "text-foreground"
+                  activeSection === item.id && "text-foreground",
                 )}
               >
                 {item.label}
@@ -129,7 +129,7 @@ export function Navigation() {
                   onClick={(e) => scrollToSection(e, item.href)}
                   className={cn(
                     "block py-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground",
-                    activeSection === item.id && "text-foreground"
+                    activeSection === item.id && "text-foreground",
                   )}
                 >
                   {item.label}
