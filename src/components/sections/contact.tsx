@@ -1,12 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send } from "lucide-react";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
+import { motion } from "framer-motion";
+import { Mail, MessageSquare, Send } from "lucide-react";
+import { useState } from "react";
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,8 +20,8 @@ export function ContactSection() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: 'Message sent!',
-      description: 'Thank you for your message. I\'ll get back to you soon.',
+      title: "Message sent!",
+      description: "Thank you for your message. I'll get back to you soon.",
     });
 
     setIsSubmitting(false);
@@ -29,7 +29,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="justify-center py-20 flex items-center">
+    <section id="contact" className="flex items-center justify-center py-20">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}

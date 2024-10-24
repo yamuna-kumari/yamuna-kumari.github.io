@@ -7,18 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier src/ --write"
+    "format": "prettier src/ --write",
+    "prepare": "husky && husky install",
+    "check-format": "prettier src/ --check"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
-    "next": "14.2.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.53.0",
-    "react-resizable-panels": "^2.1.3",
-    "recharts": "^2.12.7",
-    "sonner": "^1.5.0",
-    "tailwind-merge": "^2.5.2",
-    "react-day-picker": "^8.10.1",
     "@hookform/resolvers": "^3.9.0",
     "@next/swc-wasm-nodejs": "13.5.1",
     "@radix-ui/react-accordion": "^1.2.0",
@@ -57,23 +61,38 @@
     "framer-motion": "^11.0.8",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.446.0",
+    "next": "14.2.16",
     "next-themes": "^0.3.0",
+    "react": "^18.2.0",
+    "react-day-picker": "^8.10.1",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.53.0",
+    "react-resizable-panels": "^2.1.3",
+    "recharts": "^2.12.7",
+    "sonner": "^1.5.0",
+    "tailwind-merge": "^2.5.2",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.16",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.16",
     "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.4.30",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5",
-    "@tailwindcss/typography": "^0.5.10",
-    "tailwindcss-animate": "^1.0.7"
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
   }
 }

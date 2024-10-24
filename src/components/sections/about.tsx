@@ -1,24 +1,24 @@
 "use client";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function AboutSection() {
   const skills = [
-    'JavaScript/TypeScript',
-    'React/Next.js',
-    'Node.js',
-    'Python',
-    'AWS',
-    'Docker',
-    'GraphQL',
-    'PostgreSQL',
+    "JavaScript/TypeScript",
+    "React/Next.js",
+    "Node.js",
+    "Python",
+    "AWS",
+    "Docker",
+    "GraphQL",
+    "PostgreSQL",
   ];
 
   return (
     <section
       id="about"
-      className="justify-center py-20 flex items-center bg-muted/50"
+      className="flex items-center justify-center bg-muted/50 py-20"
     >
       <div className="container px-4">
         <motion.div
@@ -60,14 +60,15 @@ export function AboutSection() {
               className="space-y-6"
             >
               <p className="text-lg text-muted-foreground">
-                With over 8 years of experience in software development, I've
-                had the privilege of working with cutting-edge technologies and
-                building scalable solutions for complex problems.
+                With over 8 years of experience in software development,
+                I&apos;ve had the privilege of working with cutting-edge
+                technologies and building scalable solutions for complex
+                problems.
               </p>
               <p className="text-lg text-muted-foreground">
-                I'm passionate about creating efficient, maintainable code and
-                sharing knowledge with the developer community through mentoring
-                and technical writing.
+                I&apos;m passionate about creating efficient, maintainable code
+                and sharing knowledge with the developer community through
+                mentoring and technical writing.
               </p>
               <div>
                 <h3 className="mb-4 text-xl font-semibold">Technical Skills</h3>

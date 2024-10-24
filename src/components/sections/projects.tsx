@@ -1,42 +1,52 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c',
-    technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    title: "E-commerce Platform",
+    description:
+      "A full-stack e-commerce solution with real-time inventory management.",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://example.com",
   },
   {
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Real-time data visualization platform with machine learning insights.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-    technologies: ['React', 'Python', 'TensorFlow', 'D3.js'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    title: "AI-Powered Analytics Dashboard",
+    description:
+      "Real-time data visualization platform with machine learning insights.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    technologies: ["React", "Python", "TensorFlow", "D3.js"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://example.com",
   },
   {
-    title: 'Cloud Infrastructure Manager',
-    description: 'Infrastructure as code solution for managing cloud resources.',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-    technologies: ['TypeScript', 'AWS', 'Terraform', 'Docker'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    title: "Cloud Infrastructure Manager",
+    description:
+      "Infrastructure as code solution for managing cloud resources.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    technologies: ["TypeScript", "AWS", "Terraform", "Docker"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://example.com",
   },
 ];
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="justify-center py-20 flex items-center">
+    <section id="projects" className="flex items-center justify-center py-20">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}

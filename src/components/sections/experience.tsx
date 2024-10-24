@@ -1,29 +1,38 @@
 "use client";
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: 'Tech Giants Inc.',
-    position: 'Senior Software Engineer',
-    period: '2020 - Present',
-    description: 'Led development of cloud-native applications and mentored junior developers.',
-    technologies: ['React', 'Node.js', 'AWS', 'Kubernetes'],
+    company: "Tech Giants Inc.",
+    position: "Senior Software Engineer",
+    period: "2020 - Present",
+    description:
+      "Led development of cloud-native applications and mentored junior developers.",
+    technologies: ["React", "Node.js", "AWS", "Kubernetes"],
   },
   {
-    company: 'Innovation Labs',
-    position: 'Software Engineer',
-    period: '2018 - 2020',
-    description: 'Developed scalable microservices and implemented CI/CD pipelines.',
-    technologies: ['Python', 'Docker', 'PostgreSQL', 'Jenkins'],
+    company: "Innovation Labs",
+    position: "Software Engineer",
+    period: "2018 - 2020",
+    description:
+      "Developed scalable microservices and implemented CI/CD pipelines.",
+    technologies: ["Python", "Docker", "PostgreSQL", "Jenkins"],
   },
   {
-    company: 'StartUp Co',
-    position: 'Full Stack Developer',
-    period: '2016 - 2018',
-    description: 'Built and maintained full-stack web applications from scratch.',
-    technologies: ['JavaScript', 'React', 'Express', 'MongoDB'],
+    company: "StartUp Co",
+    position: "Full Stack Developer",
+    period: "2016 - 2018",
+    description:
+      "Built and maintained full-stack web applications from scratch.",
+    technologies: ["JavaScript", "React", "Express", "MongoDB"],
   },
 ];
 
@@ -31,7 +40,7 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="flex justify-center py-20 items-center bg-muted/50"
+      className="flex items-center justify-center bg-muted/50 py-20"
     >
       <div className="container px-4">
         <motion.div
