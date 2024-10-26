@@ -1,13 +1,12 @@
-'use client';
-
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/components/ui/use-toast';
-import { Mail, MessageSquare, Send } from 'lucide-react';
+"use client";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
+import { motion } from "framer-motion";
+import { Mail, MessageSquare, Send } from "lucide-react";
+import { useState } from "react";
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,8 +20,8 @@ export function ContactSection() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
-      title: 'Message sent!',
-      description: 'Thank you for your message. I\'ll get back to you soon.',
+      title: "Message sent!",
+      description: "Thank you for your message. I'll get back to you soon.",
     });
 
     setIsSubmitting(false);
@@ -30,21 +29,21 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="flex items-center justify-center py-20">
       <div className="container px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
+          className="mx-auto max-w-3xl"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
             Get in Touch
           </h2>
           <Card className="p-6">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
                     Name
@@ -81,13 +80,9 @@ export function ContactSection() {
                   className="min-h-[150px]"
                 />
               </div>
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={isSubmitting}
-              >
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? (
-                  'Sending...'
+                  "Sending..."
                 ) : (
                   <>
                     Send Message
@@ -98,7 +93,7 @@ export function ContactSection() {
             </form>
           </Card>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
             <Card className="p-6">
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6" />
