@@ -46,7 +46,7 @@ export function Navigation() {
     { href: "/#projects", id: "projects", label: "Projects" },
     { href: "/#experience", id: "experience", label: "Experience" },
     { href: "/#contact", id: "contact", label: "Contact" },
-    { href: "/blog", id: "blog", label: "Blog" },
+    // { href: "/blog", id: "blog", label: "Blog" },
   ];
 
   const scrollToSection = (
@@ -77,7 +77,7 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            JD
+            YK
           </Link>
 
           {/* Desktop Navigation */}

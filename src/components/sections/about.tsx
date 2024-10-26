@@ -5,14 +5,15 @@ import Image from "next/image";
 
 export function AboutSection() {
   const skills = [
-    "JavaScript/TypeScript",
-    "React/Next.js",
-    "Node.js",
     "Python",
-    "AWS",
-    "Docker",
-    "GraphQL",
-    "PostgreSQL",
+    "JavaScript",
+    "Java",
+    "HTML",
+    "CSS",
+    "SQL",
+    "Git",
+    "GitHub",
+    "Postman",
   ];
 
   return (
@@ -46,8 +47,8 @@ export function AboutSection() {
               className="relative aspect-square overflow-hidden rounded-lg"
             >
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-                alt="John Doe"
+                src="./images/me.png"
+                alt="Yamuna kumari"
                 fill
                 className="object-cover"
               />
@@ -60,10 +61,10 @@ export function AboutSection() {
               className="space-y-6"
             >
               <p className="text-lg text-muted-foreground">
-                With over 8 years of experience in software development,
-                I&apos;ve had the privilege of working with cutting-edge
-                technologies and building scalable solutions for complex
-                problems.
+                I am pursuing a Bachelor of Technology in computer science from
+                Chandigarh University, I&apos;ve had the privilege of working
+                with cutting-edge technologies and building scalable solutions
+                for complex problems.
               </p>
               <p className="text-lg text-muted-foreground">
                 I&apos;m passionate about creating efficient, maintainable code

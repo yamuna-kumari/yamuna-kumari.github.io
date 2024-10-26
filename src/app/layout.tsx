@@ -18,16 +18,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe | Senior Software Engineer",
+  title: "Yamuna Kumari | Software Engineer",
   description:
-    "Portfolio and blog of John Doe, a senior software engineer specializing in web development, cloud architecture, and system design.",
-  keywords: [
-    "software engineer",
-    "web developer",
-    "full stack",
-    "portfolio",
-    "blog",
-  ],
+    "Portfolio and blog of Yamuna Kumari, a software engineer specializing in web development, cloud architecture, and system design.",
+  keywords: ["software engineer", "web developer", "portfolio"],
 };
 
 export default function RootLayout({

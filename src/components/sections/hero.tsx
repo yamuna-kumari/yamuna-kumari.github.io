@@ -23,7 +23,7 @@ export function HeroSection() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-4xl font-bold tracking-tight md:text-6xl"
           >
-            Hi, I&apos;m John Doe
+            Hi, I&apos;m Yamuna Kumari
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, x: 50 }}
@@ -31,8 +31,8 @@ export function HeroSection() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="mt-6 text-xl text-muted-foreground"
           >
-            Senior Software Engineer specializing in building exceptional
-            digital experiences
+            I&apos;m a Software Engineer | Data Analyst | Machine Learning
+            Enthusiast
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,13 +47,16 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="https://github.com">
+              <Link target="_blank" href="https://github.com/yamuna-kumari">
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="https://linkedin.com">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/yamunakumari/"
+              >
                 <Linkedin className="mr-2 h-4 w-4" />
                 LinkedIn
               </Link>

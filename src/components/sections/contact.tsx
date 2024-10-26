@@ -100,7 +100,7 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold">Email</h3>
                   <p className="text-sm text-muted-foreground">
-                    john.doe@example.com
+                    yamunakumari961@gmail.com
                   </p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold">Social Media</h3>
                   <p className="text-sm text-muted-foreground">
-                    @johndoe on Twitter
+                    @yamunakumari on LinkedIn
                   </p>
                 </div>
               </div>
